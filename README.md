@@ -123,6 +123,11 @@ are on your own. Hint: you may want to add `-classic-display` flag to
                 ocamlbuild $(FLAGS) example.native
         ...
 
+License
+-------
+
+The BSD 2-Clause License, see file COPYRIGHT for more information.
+
 Notes
 -----
 
