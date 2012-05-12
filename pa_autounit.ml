@@ -86,7 +86,7 @@ module Make (Syntax : Sig.Camlp4Syntax) = struct
         let texpr = <:expr< $lid:tname$ >> in
         let _ = remember_test <:expr< $str:name$ >:: $texpr$ >> in
         <:binding< $tpatt$ = fun () -> $body$ >>
-    | _ -> Loc.raise loc (Failure "TEST")
+    | _ -> Loc.raise loc (Failure "expected: TEST description body")
 
   (* TESTSUITE implementation *)
 
@@ -131,7 +131,7 @@ module Make (Syntax : Sig.Camlp4Syntax) = struct
         <:str_item< value $suite$ = $test_suite$ >>
     | _ -> (* Syntax error *)
         let loc = Ast.loc_of_expr testsuite in
-        Loc.raise loc (Failure "expected: TESTSUITE id \"description\"")
+        Loc.raise loc (Failure "expected: TESTSUITE id description")
 
   (* Grammar extension *)
   EXTEND Gram
