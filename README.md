@@ -4,7 +4,8 @@ pa_autounit
 Introduction
 ------------
 
-Camlp4 syntax extension to simplify usage of OUnit.
+Camlp4 syntax extension to simplify usage of OUnit
+(http://ounit.forge.ocamlcore.org/).
 
 Normally when using OUnit you have to define the tests:
 
