@@ -83,7 +83,7 @@ module Make (Syntax : Sig.Camlp4Syntax) = struct
     | <:expr< $str:name$ $body$ >> ->
         let tname = new_test_name loc in
         let tpatt = <:patt< $lid:tname$ >> in
-        let texpr = <:expr< $lid:tname $ >> in
+        let texpr = <:expr< $lid:tname$ >> in
         let _ = remember_test <:expr< $str:name$ >:: $texpr$ >> in
         <:binding< $tpatt$ = fun () -> $body$ >>
     | _ -> Loc.raise loc (Failure "TEST")
