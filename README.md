@@ -106,12 +106,15 @@ are on your own. Hint: you may want to add `-classic-display` flag to
 1. Copy `pa_autounit.ml` file to your project directory.
 2. Write tests in some file, for example in `tests.ml`.
 3. Modify your `_tags` file:
+
         ...
         "pa_autounit.ml": use_camlp4, pp(camlp4orf)
         <tests.*>: package(ounit)
         "tests.ml": pp(camlp4o -I ./_build pa_autounit.cmo)
         ...
+
 4. Put something like this in your `Makefile`:
+
         ...
         FLAGS=-use-ocamlfind
         extension:
