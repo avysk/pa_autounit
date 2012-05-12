@@ -132,12 +132,14 @@ Notes
 -----
 
 * In `TEST` block each `test_body` must be a single OCaml expression so you may want to use `begin/end` blocks:
+
         TEST "some test"
         begin
           do_something ;
           and_something_else ;
           assert_something
         end
+
 * You *cannot* put anything between TESTSUITE definition and TEST block.
 * You *cannot* put anything between two TEST blocks.
 * Do not forget `open OUnit` in the beggining.
